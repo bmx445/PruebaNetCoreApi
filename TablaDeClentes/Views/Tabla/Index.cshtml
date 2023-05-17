@@ -1,0 +1,41 @@
+﻿@model List<Cliente>
+
+<table class="table table-striped">
+
+    <tr class=" table-dark">
+		<th>Id</th>
+		<th>Nombre</th>
+		<th>Apellido</th>
+		<th>Edad</th>
+		<th>Correo</th>
+		<th>Accion</th>
+    </tr>
+    @foreach (var cliente in Model)
+    {
+	    <tr>
+		    <td>
+                @cliente.id
+            </td>
+            <td>
+                @cliente.nombre
+            </td>
+            <td>
+                @cliente.apellido
+            </td>
+            <td>
+                @cliente.edad
+            </td>
+            <td>
+                @cliente.correo
+            </td>
+			<td>
+                <button class="btn btn-danger">Eliminar</button>
+                <button type="button" class="btn btn-primary">Modificar</button>
+
+
+            </td>
+        </tr>
+        
+    }
+
+</table>
